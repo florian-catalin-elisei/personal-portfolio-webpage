@@ -1,0 +1,111 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.project-tile {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-tile:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.project-tile img {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-tile p {
+  color: #333;
+  font-size: 1.2em;
+  padding: 15px;
+}
+
+#navbar {
+  background-color: #0a192f;
+  box-shadow: 0 4px 2px -2px gray;
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#navbar a {
+  color: white;
+  font-size: 1.2em;
+  padding: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#navbar a:hover {
+  color: #64ffda;
+}
+
+#welcome-section {
+  align-items: center;
+  background: linear-gradient(135deg, #0a192f, #2c3e50);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+#welcome-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+#welcome-section p {
+  font-size: 1.5em;
+}
+
+#projects {
+  background-color: #f7f7f7;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 50px;
+}
+
+#github {
+  background-color: #0a192f;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#github a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+#github a:hover {
+  color: #52e0bb;
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar a {
+    font-size: 1em;
+  }
+
+  #welcome-section h1 {
+    font-size: 2em;
+  }
+
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
